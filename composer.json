@@ -1,5 +1,5 @@
 {
-    "name": "wokora/pesapal",
+    "name": "Wokora/Pesapal",
     "description": "Pesapal for laravel",
     "type": "library",
     "license": "MIT",
@@ -12,22 +12,22 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "wokora\\pesapal\\": "src/"
+            "Wokora\\Pesapal\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "wokora\\pesapal\\": "packages/wokora/pesapal/src",
+            "wokora\\pesapal\\": "packages/Wokora/Pesapal/src",
             "Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "wokora\\pesapal\\PesapalServiceProvider"
+                "Wokora\\Pesapal\\PesapalServiceProvider"
             ],
             "aliases": {
-                "Calculator": "wokora\\pesapal\\Facades\\Pesapal"
+                "Pesapal": "Wokora\\Pesapal\\Facades\\Pesapal"
             }
         }
     }
