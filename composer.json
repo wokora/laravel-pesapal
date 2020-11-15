@@ -1,0 +1,34 @@
+{
+    "name": "wokora/pesapal",
+    "description": "Pesapal for laravel",
+    "type": "library",
+    "authors": [
+        {
+            "name": "wokora",
+            "email": "wokora@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "wokora\\pesapal\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "wokora\\pesapal\\": "packages/wokora/pesapal/src",
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "wokora\\pesapal\\PesapalServiceProvider"
+            ],
+            "aliases": {
+                "Calculator": "wokora\\pesapal\\Facades\\Pesapal"
+            }
+        }
+    }
+
+}
