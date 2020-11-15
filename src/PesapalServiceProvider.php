@@ -11,8 +11,8 @@ class PesapalServiceProvider extends ServiceProvider
 
     public function register(){
 
-         $this->app->singleton('pesapal', function($app) {
-             return new Pesapal($app);
+         $this->app->bind('Pesapal', function($app) {
+             return new Pesapal();
          });
 
     }
