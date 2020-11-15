@@ -1,10 +1,10 @@
 <?php
 namespace Wokora\Pesapal;
 
-use Wokora\Pesapal\OAuth\OAuthConsumer;
-use Wokora\Pesapal\Exceptions\PesapalException;
-use Wokora\Pesapal\OAuth\OAuthRequest;
-use Wokora\Pesapal\OAuth\OAuthSignatureMethod_HMAC_SHA1;
+use wokora\Pesapal\OAuth\OAuthConsumer;
+use wokora\Pesapal\Exceptions\PesapalException;
+use wokora\Pesapal\OAuth\OAuthRequest;
+use wokora\Pesapal\OAuth\OAuthSignatureMethod_HMAC_SHA1;
 
 class Pesapal
 {
