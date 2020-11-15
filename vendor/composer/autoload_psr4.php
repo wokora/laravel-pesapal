@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'wokora\\pesapal\\' => array($baseDir . '/src', $baseDir . '/packages/wokora/pesapal/src'),
+    'Wokora\\Pesapal\\' => array($baseDir . '/src', $baseDir . '/packages/Wokora/Pesapal/src'),
     'Tests\\' => array($baseDir . '/tests'),
 );

@@ -1,19 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mxgel
- * Date: 11/14/16
- * Time: 2:33 AM
- */
 
-namespace Knox\Pesapal\OAuth;
+namespace Wokora\Pesapal\OAuth;
 
 
-/**
- * Class OAuthDataStore
- *
- * @package Knox\Pesapal\OAuth
- */
 class OAuthDataStore
 {
     /**

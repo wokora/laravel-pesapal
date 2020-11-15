@@ -1,21 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mxgel
- * Date: 11/14/16
- * Time: 2:31 AM
- */
 
-namespace Knox\Pesapal\OAuth;
+namespace Wokora\Pesapal\OAuth;
 
-use Knox\Pesapal\OAuth\Exceptions\OAuthException;
+use Wokora\Pesapal\OAuth\Exceptions\OAuthException;
 
 
-/**
- * Class OAuthRequest
- *
- * @package Knox\Pesapal\OAuth
- */
 class OAuthRequest
 {
     /**

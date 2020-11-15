@@ -1,5 +1,5 @@
 <?php
-namespace wokora\pesapal;
+namespace Wokora\Pesapal;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -11,7 +11,7 @@ class PesapalServiceProvider extends ServiceProvider
 
     public function register(){
 
-        $this->app->bind('pesapal', function($app) {
+        $this->app->bind('Pesapal', function($app) {
             return new Pesapal();
         });
 

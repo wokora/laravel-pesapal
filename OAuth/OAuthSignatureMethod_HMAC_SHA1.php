@@ -1,18 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mxgel
- * Date: 11/14/16
- * Time: 2:28 AM
- */
 
-namespace Knox\Pesapal\OAuth;
+namespace Wokora\Pesapal\OAuth;
 
 
 /**
  * Class OAuthSignatureMethod_HMAC_SHA1
  *
- * @package Knox\Pesapal\OAuth
+ * @package Wokora\Pesapal\OAuth
  */
 class OAuthSignatureMethod_HMAC_SHA1 extends OAuthSignatureMethod
 {

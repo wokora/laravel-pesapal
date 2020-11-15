@@ -1,18 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mxgel
- * Date: 11/14/16
- * Time: 2:26 AM
- */
 
-namespace Knox\Pesapal\OAuth;
+namespace Wokora\Pesapal\OAuth;
 
 
 /**
  * Class OAuthToken
  *
- * @package Knox\Pesapal\OAuth
+ * @package Wokora\Pesapal\OAuth
  */
 class OAuthToken
 {

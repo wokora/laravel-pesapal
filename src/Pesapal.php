@@ -21,28 +21,28 @@ class Pesapal
         ];
 
         if (!array_key_exists('currency', $params)) {
-            if (config('pesapal.currency') != null) {
-                $params['currency'] = config('pesapal.currency');
+            if (config('Pesapal.currency') != null) {
+                $params['currency'] = config('Pesapal.currency');
             }
         }
 
         $params = array_merge($defaults, $params);
 
-        if (!config('pesapal.callback_url')) {
+        if (!config('Pesapal.callback_url')) {
             throw new PesapalException("callback url not provided");
         }
 
         $token = NULL;
 
-        $consumer_key = config('pesapal.consumer_key');
+        $consumer_key = config('Pesapal.consumer_key');
 
-        $consumer_secret = config('pesapal.consumer_secret');
+        $consumer_secret = config('Pesapal.consumer_secret');
 
         $signature_method = new OAuthSignatureMethod_HMAC_SHA1();
 
         $iframelink = $this->api_link('PostPesapalDirectOrderV4');
 
-        $callback_url = url('/') . '/pesapal-callback'; //redirect url, the page that will handle the response from pesapal.
+        $callback_url = url('/') . '/Pesapal-callback'; //redirect url, the page that will handle the response from Pesapal.
 
         $post_xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>
                         <PesapalDirectOrderInfo
@@ -57,7 +57,7 @@ class Pesapal
                             Currency=\"" . $params['currency'] . "\"
                             Email=\"" . $params['email'] . "\"
                             PhoneNumber=\"" . $params['phonenumber'] . "\"
-                            xmlns=\"http://www.pesapal.com\" />";
+                            xmlns=\"http://www.Pesapal.com\" />";
 
         $post_xml = htmlentities($post_xml);
 
@@ -81,8 +81,8 @@ class Pesapal
      */
     public function api_link($path = null)
     {
-        $live = 'https://www.pesapal.com/api/';
-        $demo = 'https://demo.pesapal.com/api/';
-        return (config('pesapal.live') ? $live : $demo) . $path;
+        $live = 'https://www.Pesapal.com/api/';
+        $demo = 'https://demo.Pesapal.com/api/';
+        return (config('Pesapal.live') ? $live : $demo) . $path;
     }
 }
