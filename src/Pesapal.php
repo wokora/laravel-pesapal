@@ -1,4 +1,5 @@
 <?php
+namespace wokora\pesapal;
 
 use wokora\pesapal\OAuth\OAuthConsumer;
 
