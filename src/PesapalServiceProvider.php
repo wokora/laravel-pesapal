@@ -1,5 +1,5 @@
 <?php
-namespace wokora\pesapal;
+namespace Wokora\Pesapal;
 
 use Illuminate\Support\ServiceProvider;
 
