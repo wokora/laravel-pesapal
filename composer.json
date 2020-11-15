@@ -2,6 +2,7 @@
     "name": "wokora/pesapal",
     "description": "Pesapal for laravel",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "wokora",
