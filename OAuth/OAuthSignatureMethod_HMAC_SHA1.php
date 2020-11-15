@@ -6,7 +6,7 @@ namespace Wokora\Pesapal\OAuth;
 /**
  * Class OAuthSignatureMethod_HMAC_SHA1
  *
- * @package Wokora\Pesapal\OAuth
+ * @package wokora\pesapal\OAuth
  */
 class OAuthSignatureMethod_HMAC_SHA1 extends OAuthSignatureMethod
 {

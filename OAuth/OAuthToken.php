@@ -6,7 +6,7 @@ namespace Wokora\Pesapal\OAuth;
 /**
  * Class OAuthToken
  *
- * @package Wokora\Pesapal\OAuth
+ * @package wokora\pesapal\OAuth
  */
 class OAuthToken
 {

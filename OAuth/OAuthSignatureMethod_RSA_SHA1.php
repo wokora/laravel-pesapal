@@ -8,7 +8,7 @@ use Wokora\Pesapal\OAuth\Exceptions\OAuthException;
 /**
  * Class OAuthSignatureMethod_RSA_SHA1
  *
- * @package Wokora\Pesapal\OAuth
+ * @package wokora\pesapal\OAuth
  */
 class OAuthSignatureMethod_RSA_SHA1 extends OAuthSignatureMethod
 {

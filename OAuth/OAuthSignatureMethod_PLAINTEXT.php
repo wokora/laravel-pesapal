@@ -6,7 +6,7 @@ namespace Wokora\Pesapal\OAuth;
 /**
  * Class OAuthSignatureMethod_PLAINTEXT
  *
- * @package Wokora\Pesapal\OAuth
+ * @package wokora\pesapal\OAuth
  */
 class OAuthSignatureMethod_PLAINTEXT extends OAuthSignatureMethod
 {

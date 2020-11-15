@@ -6,7 +6,7 @@ namespace Wokora\Pesapal\OAuth;
 /**
  * Class OAuthSignatureMethod
  *
- * @package Wokora\Pesapal\OAuth
+ * @package wokora\pesapal\OAuth
  */
 class OAuthSignatureMethod
 {

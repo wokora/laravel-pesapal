@@ -9,7 +9,7 @@ class ComposerStaticInit4bebcf8be0b9d4be83a3ea29fef3a655
     public static $prefixLengthsPsr4 = array (
         'w' =>
         array (
-            'Wokora\\Pesapal\\' => 15,
+            'wokora\\pesapal\\' => 15,
         ),
         'T' =>
         array (
@@ -18,10 +18,10 @@ class ComposerStaticInit4bebcf8be0b9d4be83a3ea29fef3a655
     );
 
     public static $prefixDirsPsr4 = array (
-        'Wokora\\Pesapal\\' =>
+        'wokora\\pesapal\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',
-            1 => __DIR__ . '/../..' . '/packages/Wokora/Pesapal/src',
+            1 => __DIR__ . '/../..' . '/packages/wokora/pesapal/src',
         ),
         'Tests\\' =>
         array (

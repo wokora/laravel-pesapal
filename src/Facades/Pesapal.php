@@ -7,6 +7,6 @@ class Pesapal extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'Pesapal';
+        return 'pesapal';
     }
 }
