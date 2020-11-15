@@ -12,22 +12,22 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "wokora\\pesapal\\": "src/"
+            "Wokora\\Pesapal\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "wokora\\pesapal\\": "packages/wokora/pesapal/src",
+            "Wokora\\Pesapal\\": "packages/Wokora/Pesapal/src",
             "Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "wokora\\pesapal\\PesapalServiceProvider"
+                "Wokora\\Pesapal\\PesapalServiceProvider"
             ],
             "aliases": {
-                "Pesapal": "wokora\\pesapal\\Facades\\Pesapal"
+                "Pesapal": "Wokora\\Pesapal\\Facades\\Pesapal"
             }
         }
     }
