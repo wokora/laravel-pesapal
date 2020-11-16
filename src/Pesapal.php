@@ -1,25 +1,29 @@
 <?php
 namespace Wokora\Pesapal;
 
-use wokora\Pesapal\OAuth\OAuthConsumer;
-use wokora\Pesapal\Exceptions\PesapalException;
-use wokora\Pesapal\OAuth\OAuthRequest;
-use wokora\Pesapal\OAuth\OAuthSignatureMethod_HMAC_SHA1;
+use Wokora\Pesapal\OAuth\OAuthConsumer;
+use Wokora\Pesapal\OAuth\OAuthRequest;
+use Wokora\Pesapal\OAuth\OAuthSignatureMethod_HMAC_SHA1;
+use Wokora\Pesapal\Exceptions\PesapalException;
+
 
 class Pesapal
 {
-    private $callback_url = '';
+    public $amount;
+    public $description;
+    public $reference;
+    public $email;
 
-    public function Pay( $params ){
+    public function pay(){
 
-        $defaults = [
-            'amount' => '',
-            'description' => '',
+        $params = [
+            'amount' => $this->amount,
+            'description' => $this->description,
             'type' => 'MERCHANT',
-            'reference' => '',
+            'reference' => $this->reference,
             'first_name' => '',
             'last_name' => '',
-            'email' => '',
+            'email' => $this->email,
             'currency' => 'KES',
             'phonenumber' => '',
         ];
@@ -29,8 +33,6 @@ class Pesapal
                 $params['currency'] = config('pesapal.currency');
             }
         }
-
-        $params = array_merge($defaults, $params);
 
         if (!config('pesapal.callback_url')) {
             throw new PesapalException("callback url not provided");

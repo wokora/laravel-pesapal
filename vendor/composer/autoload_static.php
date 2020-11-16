@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit4bebcf8be0b9d4be83a3ea29fef3a655
 {
+    public static $files = array (
+        '66108df72452dae683f42b8ea42d1c01' => __DIR__ . '/../..' . '/functions/Oauth.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'W' => 
         array (
@@ -31,6 +35,17 @@ class ComposerStaticInit4bebcf8be0b9d4be83a3ea29fef3a655
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'OAuthConsumer' => __DIR__ . '/../..' . '/functions/Oauth.php',
+        'OAuthDataStore' => __DIR__ . '/../..' . '/functions/Oauth.php',
+        'OAuthException' => __DIR__ . '/../..' . '/functions/Oauth.php',
+        'OAuthRequest' => __DIR__ . '/../..' . '/functions/Oauth.php',
+        'OAuthServer' => __DIR__ . '/../..' . '/functions/Oauth.php',
+        'OAuthSignatureMethod' => __DIR__ . '/../..' . '/functions/Oauth.php',
+        'OAuthSignatureMethod_HMAC_SHA1' => __DIR__ . '/../..' . '/functions/Oauth.php',
+        'OAuthSignatureMethod_PLAINTEXT' => __DIR__ . '/../..' . '/functions/Oauth.php',
+        'OAuthSignatureMethod_RSA_SHA1' => __DIR__ . '/../..' . '/functions/Oauth.php',
+        'OAuthToken' => __DIR__ . '/../..' . '/functions/Oauth.php',
+        'OAuthUtil' => __DIR__ . '/../..' . '/functions/Oauth.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

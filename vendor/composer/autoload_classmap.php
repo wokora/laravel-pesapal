@@ -7,4 +7,15 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'OAuthConsumer' => $baseDir . '/functions/Oauth.php',
+    'OAuthDataStore' => $baseDir . '/functions/Oauth.php',
+    'OAuthException' => $baseDir . '/functions/Oauth.php',
+    'OAuthRequest' => $baseDir . '/functions/Oauth.php',
+    'OAuthServer' => $baseDir . '/functions/Oauth.php',
+    'OAuthSignatureMethod' => $baseDir . '/functions/Oauth.php',
+    'OAuthSignatureMethod_HMAC_SHA1' => $baseDir . '/functions/Oauth.php',
+    'OAuthSignatureMethod_PLAINTEXT' => $baseDir . '/functions/Oauth.php',
+    'OAuthSignatureMethod_RSA_SHA1' => $baseDir . '/functions/Oauth.php',
+    'OAuthToken' => $baseDir . '/functions/Oauth.php',
+    'OAuthUtil' => $baseDir . '/functions/Oauth.php',
 );

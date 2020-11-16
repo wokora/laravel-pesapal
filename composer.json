@@ -1,5 +1,5 @@
 {
-    "name": "wokora/laravel-pesapal",
+    "name": "wokora/pesapal",
     "description": "Pesapal for laravel",
     "type": "library",
     "license": "MIT",
@@ -20,6 +20,11 @@
             "Wokora\\Pesapal\\": "packages/Wokora/Pesapal/src",
             "Tests\\": "tests/"
         }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "php artisan vendor:publish --tag=pesapal --force"
+        ]
     },
     "extra": {
         "laravel": {

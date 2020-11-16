@@ -6,12 +6,14 @@ use Illuminate\Support\ServiceProvider;
 class PesapalServiceProvider extends ServiceProvider
 {
     public function boot(){
-        dd( 'It works' );
+        // Publish config
+        $configPath = __DIR__ . '/config/pesapal.php';
+        $this->publishes([$configPath => config_path('pesapal.php')], 'config');
     }
 
     public function register(){
 
-         $this->app->singleton(Pesapal::class, function($app) {
+         $this->app->singleton('pesapal', function($app) {
              return new Pesapal();
          });
 
