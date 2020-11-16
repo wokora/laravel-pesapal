@@ -1,5 +1,5 @@
 {
-    "name": "wokora/pesapal",
+    "name": "wokora/laravel-pesapal",
     "description": "Pesapal for laravel",
     "type": "library",
     "license": "MIT",
@@ -25,10 +25,7 @@
         "laravel": {
             "providers": [
                 "Wokora\\Pesapal\\PesapalServiceProvider"
-            ],
-            "aliases": {
-                "Pesapal": "Wokora\\Pesapal\\Facades\\Pesapal"
-            }
+            ]
         }
     }
 

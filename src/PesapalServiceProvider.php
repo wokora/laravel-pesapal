@@ -6,12 +6,12 @@ use Illuminate\Support\ServiceProvider;
 class PesapalServiceProvider extends ServiceProvider
 {
     public function boot(){
-
+        dd( 'It works' );
     }
 
     public function register(){
 
-         $this->app->bind('Pesapal', function($app) {
+         $this->app->singleton(Pesapal::class, function($app) {
              return new Pesapal();
          });
 

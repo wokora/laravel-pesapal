@@ -7,23 +7,23 @@ namespace Composer\Autoload;
 class ComposerStaticInit4bebcf8be0b9d4be83a3ea29fef3a655
 {
     public static $prefixLengthsPsr4 = array (
-        'w' =>
+        'W' => 
         array (
-            'wokora\\pesapal\\' => 15,
+            'Wokora\\Pesapal\\' => 15,
         ),
-        'T' =>
+        'T' => 
         array (
             'Tests\\' => 6,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'wokora\\pesapal\\' =>
+        'Wokora\\Pesapal\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
-            1 => __DIR__ . '/../..' . '/packages/wokora/pesapal/src',
+            1 => __DIR__ . '/../..' . '/packages/Wokora/Pesapal/src',
         ),
-        'Tests\\' =>
+        'Tests\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests',
         ),
