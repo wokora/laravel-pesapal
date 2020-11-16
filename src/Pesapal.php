@@ -9,10 +9,16 @@ use Wokora\Pesapal\Exceptions\PesapalException;
 
 class Pesapal
 {
+    public $callback_url;
     public $amount;
     public $description;
+    public $type = 'MERCHANT';
     public $reference;
+    public $first_name = '';
+    public $last_name = '';
     public $email;
+    public $currency = 'KES';
+    public $phonenumber = '';
 
     public function pay(){
 
@@ -28,14 +34,15 @@ class Pesapal
             'phonenumber' => '',
         ];
 
-        if (!array_key_exists('currency', $params)) {
-            if (config('pesapal.currency') != null) {
-                $params['currency'] = config('pesapal.currency');
-            }
+        if (config('pesapal.currency') != null) {
+            $this->currency = config('pesapal.currency');
         }
+
 
         if (!config('pesapal.callback_url')) {
             throw new PesapalException("callback url not provided");
+        }else{
+            $this->callback_url = config('pesapal.callback_url');
         }
 
         $token = NULL;
@@ -48,21 +55,19 @@ class Pesapal
 
         $iframelink = $this->api_link('PostPesapalDirectOrderV4');
 
-        $callback_url = url('/') . '/pesapal-callback'; //redirect url, the page that will handle the response from pesapal.
-
         $post_xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>
                         <PesapalDirectOrderInfo
                             xmlns:xsi=\"http://www.w3.org/2001/XMLSchemainstance\"
                             xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
-                            Amount=\"" . $params['amount'] . "\"
-                            Description=\"" . $params['description'] . "\"
-                            Type=\"" . $params['type'] . "\"
-                            Reference=\"" . $params['reference'] . "\"
-                            FirstName=\"" . $params['first_name'] . "\"
-                            LastName=\"" . $params['last_name'] . "\"
-                            Currency=\"" . $params['currency'] . "\"
-                            Email=\"" . $params['email'] . "\"
-                            PhoneNumber=\"" . $params['phonenumber'] . "\"
+                            Amount=\"" . $this->amount . "\"
+                            Description=\"" . $this->description . "\"
+                            Type=\"" . $this->type . "\"
+                            Reference=\"" . $this->reference . "\"
+                            FirstName=\"" . $this->first_name . "\"
+                            LastName=\"" . $this->last_name . "\"
+                            Currency=\"" . $this->currency . "\"
+                            Email=\"" . $this->email . "\"
+                            PhoneNumber=\"" . $this->phonenumber . "\"
                             xmlns=\"http://www.pesapal.com\" />";
 
         $post_xml = htmlentities($post_xml);
@@ -71,7 +76,7 @@ class Pesapal
 
         $iframe_src = OAuthRequest::from_consumer_and_token($consumer, $token, "GET", $iframelink, $params);
 
-        $iframe_src->set_parameter("oauth_callback", $callback_url);
+        $iframe_src->set_parameter("oauth_callback", $this->callback_url);
 
         $iframe_src->set_parameter("pesapal_request_data", $post_xml);
 
