@@ -27,10 +27,10 @@ The ENV Variables can also be set from here.
 #### Example ENV
 
 ```
-PESAPAL_LIVE=true
-PESAPAL_CONSUMER_KEY=""
-PESAPAL_CONSUMER_SECRET=""
-PESAPAL_CALLBACK_URL="http://127/0.0.1:8000/confirm"
+ PESAPAL_LIVE=true
+ PESAPAL_CONSUMER_KEY=""
+ PESAPAL_CONSUMER_SECRET=""
+ PESAPAL_CALLBACK_URL="http://127/0.0.1:8000/confirm"
 ```
 #### All Done
 Feel free to report any issues
