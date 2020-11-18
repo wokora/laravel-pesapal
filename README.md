@@ -25,7 +25,6 @@ Publish the configuration file and migrations by running the provided console co
 The ENV Variables can also be set from here.
 ```
 #### Example ENV
-
 ```
  PESAPAL_LIVE=true
  PESAPAL_CONSUMER_KEY=""
